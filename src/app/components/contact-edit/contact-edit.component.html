@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-left">Edit Contact</h2>
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <div class="hidden">
+            <input type="hidden" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+          </div>
+  
+          <div class="form-group">
+            <span class='red'>*</span>
+            <label for="firstName">First Name:</label>
+            <input required formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+          </div>
+  
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="lastName">Last Name:</label>
+            <input required formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+          </div>
+  
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="adsress">Address:</label>
+            <input required formControlName="address" placeholder="address" name="address" class="form-control" id="address">
+          </div>
+  
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="position">Position:</label>
+            <input required formControlName="position" placeholder="position" name="position" class="form-control" id="position">
+          </div>
+  
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="imageUrl">Image Url:</label>
+            <input required formControlName="imageUrl" placeholder="Image Url" name="imageUrl" class="form-control" id="imageUrl">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyName">Company Name:</label>
+            <input required formControlName="companyName" placeholder="Company Name" name="companyName" class="form-control" id="companyName">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyAddrss">Company Addrss:</label>
+            <input required formControlName="companyAddrss" placeholder="Company Addrss" name="companyAddrss" class="form-control" id="companyAddrss">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyCity">Company City:</label>
+            <input required formControlName="companyCity" placeholder="Company City" name="companyCity" class="form-control" id="companyCity">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyState">Company State:</label>
+            <input required formControlName="companyState" placeholder="Company State" name="companyState" class="form-control" id="companyState">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyZip">Company Zip:</label>
+            <input required formControlName="companyZip" placeholder="Company Zip" name="companyZip" class="form-control" id="companyZip">
+          </div>
+
+          <div class="form-group">
+              <span class='red'>*</span>
+            <label for="companyPhone">Company Phone:</label>
+            <input required formControlName="companyPhone" placeholder="Company Phone" name="companyPhone" class="form-control" id="companyPhone">
+          </div>
+
+
+  
+          <button [disabled]="editForm.invalid" class="btn btn-success">Edit</button>
+        </form>
+      </div>
+  
+    </div>
+  </div>

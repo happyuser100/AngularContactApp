@@ -1,0 +1,104 @@
+<div class="container">
+
+  <div *ngIf="isDesktopDevice">
+
+    <div *ngFor="let item of contacts; let i = index">
+      <div class="row  mt-1 mb-1 pt-1 pb-1 border-primary">
+        <div class="col-md-12">
+          <div class="row mt-0 pt-0">
+            <div class="col-md-2">
+              <div><img class="rounded-circle" width="128" height="128" src="{{item.imageUrl}}" alt=""></div>
+              <div>{{item.position}}</div>
+            </div>
+            <div class="col-md-2">
+              <div><span class="font-weight-bold">{{item.firstName}} {{item.lastName}}</span> </div>
+              <div><span>{{item.address}}</span></div>
+
+              <div class="mt-2 pt-2"><span class="font-weight-bold">{{item.companyName}}</span></div>
+
+              <div><span>{{item.companyAddrss}}</span></div>
+              <div><span>{{item.companyCity}},{{item.companyState}} {{item.companyZip}}</span></div>
+              <div><i class="fa fa-phone" title=""></i><span>{{item.companyPhone}}</span></div>
+            </div>
+            <div class="col-md-2">
+              <div class="pr-1 float-left">
+                <button (click)="editContact(item)" style="font-size:16px">
+                  <i class="fa fa-edit" title="edit contact"></i>
+                </button>
+              </div>
+              <div class="pr-1 float-left">
+                <button (click)="deleteContact(item)" style="font-size:16px">
+                  <i class="fa fa-trash" title="delete contact"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-1 mb-1 pt-1 pb-1">
+      <div class="col-md-10">
+      </div>
+
+      <div class="col-md-2">
+        <button (click)="addContact()" style="font-size:16px">
+          <i class="fa fa-plus" title="add customer"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="isMobile || isTablet">
+      <div *ngFor="let item of contacts; let i = index">
+          <div class="row  mt-1 mb-1 pt-1 pb-1 border-primary">
+            <div class="col-sm-12">
+              <div class="row mt-0 pt-0">
+                <div class="col-sm-2">
+                  <div><img class="rounded-circle" width="128" height="128" src="{{item.imageUrl}}" alt=""></div>
+                  <div>{{item.position}}</div>
+                </div>
+                <div class="col-sm-2">
+                  <div><span class="font-weight-bold">{{item.firstName}} {{item.lastName}}</span> </div>
+                  <div><span>{{item.address}}</span></div>
+    
+                  <div class="mt-2 pt-2"><span class="font-weight-bold">{{item.companyName}}</span></div>
+    
+                  <div><span>{{item.companyAddrss}}</span></div>
+                  <div><span>{{item.companyCity}},{{item.companyState}} {{item.companyZip}}</span></div>
+                  <div><i class="fa fa-phone" title=""></i><span>{{item.companyPhone}}</span></div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="pr-1 float-left">
+                    <button (click)="editContact(item)" style="font-size:16px">
+                      <i class="fa fa-edit" title="edit contact"></i>
+                    </button>
+                  </div>
+                  <div class="pr-1 float-left">
+                    <button (click)="deleteContact(item)" style="font-size:16px">
+                      <i class="fa fa-trash" title="delete contact"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row mt-1 mb-1 pt-1 pb-1">
+          <div class="col-sm-10">
+          </div>
+    
+          <div class="col-sm-2">
+            <button (click)="addContact()" style="font-size:16px">
+              <i class="fa fa-plus" title="add customer"></i>
+            </button>
+          </div>
+        </div>
+    
+
+  </div>
+
+
+</div>
